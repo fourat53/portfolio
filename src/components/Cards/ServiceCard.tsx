@@ -36,9 +36,9 @@ export function ServiceCard({
 			<CardFooter>
 				<a
 					href={linkHref}
-					className="flex items-center gap-3 text-[11px] tracking-[0.2em] uppercase text-stone-500 group-hover:text-white transition-colors"
+					className="flex items-center gap-3 text-[11px] tracking-[0.2em] uppercase text-text-secondary group-hover:text-white transition-colors"
 				>
-					<span className="border border-white/10 rounded-full p-2 group-hover:border-[#d4af37]/50 transition-colors">
+					<span className="border rounded-full p-2 transition-colors">
 						<IconArrowRight size={14} stroke={1.5} />
 					</span>
 					{linkText}

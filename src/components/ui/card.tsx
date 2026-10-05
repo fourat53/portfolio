@@ -10,40 +10,28 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {
 
 const paddingClasses = {
 	none: "",
-	sm: "p-4",
-	md: "p-6",
-	lg: "p-8",
+	sm: "p-3 md:p-4",
+	md: "p-4 md:p-6",
+	lg: "p-5 md:p-8",
 };
 
 const variantClasses = {
-	default: "bg-(--bg-secondary) border border-white/5",
-	elevated:
-		"bg-(--bg-background) border border-white/5 shadow-[0_22px_44px_rgba(0,0,0,0.3)]",
+	default: "bg-bg-secondary border border-primary",
+	elevated: "bg-bg-background border border-white/5 shadow-md",
 	outlined: "bg-transparent border border-white/10",
 	project:
-		"bg-(--bg-background) border border-background/5 overflow-hidden relative",
+		"bg-bg-primary overflow-hidden relative border border-primary hover:shadow-md hover:translate-y-[-2px] hover:translate-x-[-1px]",
 };
 
 export const Card = forwardRef<HTMLDivElement, CardProps>(
 	(
-		{
-			variant = "default",
-			hover = false,
-			padding = "md",
-			children,
-			className = "",
-			...props
-		},
+		{ variant = "default", padding = "md", children, className = "", ...props },
 		ref,
 	) => {
 		return (
 			<div
 				ref={ref}
-				className={`${variantClasses[variant]} ${paddingClasses[padding]} transition-all duration-300 ${
-					hover
-						? "group-hover:border-primary/40 group-hover:shadow-[0_0_20px_rgba(212,175,55,0.1)]"
-						: ""
-				} ${className}`}
+				className={`${variantClasses[variant]} ${paddingClasses[padding]} transition-all duration-300 ${className}`}
 				{...props}
 			>
 				{children}
@@ -79,7 +67,7 @@ export const CardTitle = forwardRef<HTMLHeadingElement, CardTitleProps>(
 		return (
 			<h3
 				ref={ref}
-				className={`text-xl uppercase tracking-widest font-light text-white ${className}`}
+				className={`text-xl uppercase tracking-widest font-light text-text-primary ${className}`}
 				{...props}
 			>
 				{children}

@@ -2,7 +2,7 @@ import { ExperienceCard } from "@/components/Cards/ExperienceCard";
 
 const experiences = [
 	{
-		date: "Avril 2025 - Nov 2025",
+		date: "Apr 2025 - Nov 2025",
 		company: "Echo Parrot | Onrtech",
 		role: "Stage de fin d'études",
 		description:
@@ -15,7 +15,7 @@ const experiences = [
 		side: "left" as const,
 	},
 	{
-		date: "Nov 2024 - Déc 2024",
+		date: "Nov 2024 - Dec 2024",
 		company: "Kreatek",
 		role: "Stage d'immersion",
 		description:
@@ -24,7 +24,7 @@ const experiences = [
 		side: "right" as const,
 	},
 	{
-		date: "Juillet 2024 - Sept 2024",
+		date: "Jul 2024 - Sep 2024",
 		company: "Royal Absu | Kreatek",
 		role: "Stage ingénieur",
 		description:
@@ -37,7 +37,7 @@ const experiences = [
 		side: "left" as const,
 	},
 	{
-		date: "Août 2023 - Sept 2023",
+		date: "Aug 2023 - Sep 2023",
 		company: "Orange",
 		role: "Stage d'été",
 		description:
@@ -49,16 +49,19 @@ const experiences = [
 
 export function Experience() {
 	return (
-		<section className="py-32 border-t border-(--border-subtle) relative bg-(--bg-primary)">
-			<div className="text-center mb-24 max-w-4xl mx-auto px-6">
-				<div className="text-[11px] tracking-[0.2em] uppercase text-(--text-subtle) mb-6">
+		<section
+			id="experience"
+			className="py-20 space-y-20 border-t border-primary relative bg-bg-primary"
+		>
+			<div className="text-center max-w-4xl mx-auto px-6">
+				<div className="text-[11px] tracking-[0.2em] uppercase text-text-subtle mb-6">
 					THE PROCESS
 				</div>
-				<h2 className="display-title text-5xl md:text-7xl mb-8">
+				<h2 className="font-display text-5xl md:text-7xl mb-8">
 					Your Website <br />
-					<span className="italic text-(--text-secondary)">in 4 steps</span>
+					<span className="italic text-text-secondary">in 4 steps</span>
 				</h2>
-				<p className="text-(--text-muted) max-w-lg mx-auto font-light leading-relaxed">
+				<p className="text-text-muted max-w-lg mx-auto font-light leading-relaxed">
 					Mon parcours professionnel assure une création méthodique et experte
 					de vos projets numériques.
 				</p>
@@ -66,7 +69,7 @@ export function Experience() {
 
 			<div className="max-w-5xl mx-auto px-6 relative">
 				{/* Vertical Line */}
-				<div className="absolute left-10 md:left-1/2 top-0 bottom-0 w-px bg-(--border-subtle) md:-translate-x-1/2" />
+				<div className="max-md:hidden absolute left-10 md:left-1/2 -top-8 bottom-0 w-px bg-text-secondary md:-translate-x-1/2" />
 
 				{experiences.map((exp, i) => (
 					<ExperienceCard key={i} number={`0${i + 1}`} {...exp} />

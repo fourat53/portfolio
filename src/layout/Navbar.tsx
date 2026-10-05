@@ -7,17 +7,17 @@ export function Navbar() {
 	const [scrolled, setScrolled] = useState(false);
 
 	useEffect(() => {
-		const handleScroll = () => setScrolled(window.scrollY > 20);
-		window.addEventListener("scroll", handleScroll);
-		return () => window.removeEventListener("scroll", handleScroll);
+		window.addEventListener("scroll", () => setScrolled(window.scrollY > 20));
+		return () =>
+			window.removeEventListener("scroll", () =>
+				setScrolled(window.scrollY > 20),
+			);
 	}, []);
 
 	return (
 		<header
-			className={`fixed text-(--text-primary) top-0 w-full z-50 transition-all ${
-				scrolled
-					? "bg-(--bg-primary)/90 backdrop-blur-md border-b border-(--border-subtle)"
-					: "bg-transparent"
+			className={`fixed text-text-primary top-0 w-full z-50 transition-all bg-transparent backdrop-blur-md  ${
+				scrolled && "border-b border-primary/40"
 			}`}
 		>
 			<Navigation />

@@ -9,24 +9,16 @@ export function ThemeToggle() {
 		<button
 			type="button"
 			onClick={toggleTheme}
-			className="relative p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors text-stone-400 hover:text-white"
-			aria-label={
-				theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
-			}
+			className="relative p-2 bg-bg-tertiary border hover:border-primary hover:text-primary transition-colors text-stone-400"
 		>
 			<span className="sr-only">
 				{theme === "dark" ? "Light mode" : "Dark mode"}
 			</span>
-			<IconSun
-				size={18}
-				stroke={1.5}
-				className={theme === "dark" ? "block" : "hidden"}
-			/>
-			<IconMoon
-				size={18}
-				stroke={1.5}
-				className={theme === "dark" ? "hidden" : "block"}
-			/>
+			{theme === "dark" ? (
+				<IconSun size={18} stroke={1.5} />
+			) : (
+				<IconMoon size={18} stroke={1.5} />
+			)}
 		</button>
 	);
 }

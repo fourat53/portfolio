@@ -7,47 +7,51 @@ const projects = [
 		title: "Shopofort",
 		description:
 			"E-commerce platform with Next.js, Prisma, and Kinde Auth. Featuring a dynamic catalog, dashboard, and Zod validation.",
-		imagePosition: "right-top" as const,
+		imageUrl: "chatAI.png",
+		link: "https://shopofort.vercel.app/",
 	},
 	{
-		category: "FULL-STACK WEB & IA",
+		category: "FULL-STACK WEB & AI",
+		title: "Echo Parrot",
+		description:
+			"SaaS VoIP platform with FastAPI, ChromaDB, and FAISS. Features real-time chat, RAG microservice, and AI agents for customer interaction.",
+		imageUrl: "chatAI.png",
+		link: "https://ai-chat-front-mauve.vercel.app/",
+	},
+	{
+		category: "FULL-STACK WEB & AI",
 		title: "Chat AI",
 		description:
 			"RAG system with LangChain, Pinecone, Gemini, and FastAPI for semantic search and AI generation.",
-		imagePosition: "right-center" as const,
+		imageUrl: "chatAI.png",
+		link: "https://ai-chat-front-mauve.vercel.app/",
 	},
 	{
 		category: "DEVOPS",
 		title: "Projet DevOps",
 		description:
 			"CI/CD pipelines, Docker deployment, Spring Boot testing with Mockito, SonarQube, Prometheus & Grafana.",
-		imagePosition: "right-bottom" as const,
-	},
-	{
-		category: "FULL-STACK WEB",
-		title: "FreeLearn",
-		description:
-			"E-learning platform using React, Spring Boot, and OAuth2 for course tracking and enrollment.",
-		imagePosition: "full" as const,
+		imageUrl: "chatAI.png",
+		link: "https://ai-chat-front-mauve.vercel.app/",
 	},
 ];
 
 export function Projects() {
 	return (
 		<section
-			id="work"
-			className="py-20 border-t border-(--border-subtle) bg-(--bg-secondary)"
+			id="projects"
+			className="py-24 border-t border-primary bg-bg-secondary"
 		>
 			<div className="max-w-7xl mx-auto px-6">
-				<div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-					<h2 className="text-4xl md:text-5xl text-(--text-secondary) display-title">
+				<div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+					<h2 className="text-4xl md:text-4xl text-text-secondary font-medium uppercase font-heading">
 						Projects
 					</h2>
 					<a
 						href="/"
-						className="flex items-center gap-3 text-[11px] tracking-[0.2em] uppercase text-(--text-muted) hover:text-(--text-primary) transition-colors"
+						className="flex items-center gap-3 text-[11px] tracking-[0.2em] uppercase text-text-muted hover:text-text-primary transition-colors"
 					>
-						<span className="border border-(--border-subtle) rounded-full p-2.5">
+						<span className="border rounded-full p-2.5">
 							<IconArrowRight size={14} stroke={1.5} />
 						</span>
 						SEE ALL

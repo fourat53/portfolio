@@ -14,7 +14,7 @@ export const Route = createFileRoute("/")({
 
 function Home() {
 	return (
-		<div className="min-h-screen font-sans overflow-x-hidden bg-(--bg-primary) text-(--text-primary)">
+		<div className="min-h-screen font-sans overflow-x-hidden bg-bg-primary">
 			<Navbar />
 			<main>
 				<Hero />

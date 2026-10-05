@@ -1,17 +1,33 @@
-import { cn } from "cn";
-import favicon from "/favicon.png";
+import { Link } from "@tanstack/react-router";
+import favicon from "/favicon.svg";
 
-export default function Logo({ className }: { className?: string }) {
+export default function Logo({ size }: { size: number }) {
 	return (
-		<div
-			className={cn(
-				"relative rounded-[10%] border border-primary/40 bg-(--bg-tertiary) hover:shadow-[0_0_10px_rgba(212,175,55,0.1)]",
-				className,
-			)}
+		<Link
+			to="/"
+			className="cursor-pointer border-2 border-primary hover:shadow-md"
+			style={{
+				width: size * 0.9,
+				height: size,
+			}}
 		>
-			<div className="p-[16%]">
-				<img src={favicon} alt="Profile" />
+			<div className="pl-px w-full h-full flex items-center justify-center">
+				<div
+					className="bg-text-secondary"
+					style={{
+						width: size * 0.55,
+						height: size * 0.6,
+						maskImage: `url(${favicon})`,
+						WebkitMaskImage: `url(${favicon})`,
+						maskRepeat: "no-repeat",
+						WebkitMaskRepeat: "no-repeat",
+						maskPosition: "center",
+						WebkitMaskPosition: "center",
+						maskSize: "contain",
+						WebkitMaskSize: "contain",
+					}}
+				/>
 			</div>
-		</div>
+		</Link>
 	);
 }

@@ -29,7 +29,10 @@ const services = [
 
 export function Services() {
 	return (
-		<section id="services" className="py-32 max-w-7xl mx-auto px-6">
+		<section
+			id="services"
+			className="py-16 sm:py-24 md:py-32 max-w-7xl mx-auto px-6"
+		>
 			<div className="grid md:grid-cols-3 gap-6">
 				{services.map((service) => (
 					<ServiceCard key={service.number} {...service} />

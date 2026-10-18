@@ -29,7 +29,7 @@ export function Footer() {
 	return (
 		<footer
 			id="contact"
-			className="bg-bg-primary border-t border-primary px-10 py-20"
+			className="bg-bg-primary border-t border-primary px-6 sm:px-10 py-12 sm:py-16 md:py-20"
 		>
 			<div className="max-w-7xl mx-auto">
 				<div className="flex flex-col md:flex-row justify-between gap-12">
@@ -39,8 +39,8 @@ export function Footer() {
 							Fourat Taktak
 						</p>
 						<p className="mt-3 max-w-sm text-xs leading-relaxed tracking-wide text-text-subtle">
-							Ingénieur informatique spécialisé dans le développement
-							d'applications web modernes.
+							Software engineer specializing in modern web application
+							development.
 						</p>
 					</div>
 					<div className="flex flex-col gap-4">
@@ -71,7 +71,7 @@ export function Footer() {
 						</div>
 					</div>
 				</div>
-				<div className="mt-16 pt-6 border-t flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-[10px] tracking-[0.18em] uppercase text-text-subtle">
+				<div className="mt-12 sm:mt-16 pt-6 border-t flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-[10px] tracking-[0.18em] uppercase text-text-subtle">
 					<span>© {year} Fourat Taktak</span>
 					<button
 						type="button"

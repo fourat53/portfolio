@@ -11,14 +11,14 @@ export function Hero() {
 				/>
 
 				<div className="py-6 relative z-10 flex w-full flex-1 flex-col items-center justify-center text-center">
-					<h1 className="mb-6 mt-4 font-display text-4xl leading-[1.1] tracking-tight md:text-6xl lg:text-7xl">
-						Ingénieur informatique <br />
+					<h1 className="mb-6 mt-4 font-display text-4xl leading-[1.1] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+						Software Engineer <br />
 						<span className="italic text-text-secondary">& Full-Stack Web</span>
 					</h1>
 
 					<p className="mb-4 md:mb-12 max-w-2xl text-sm font-light leading-relaxed text-text-muted md:text-base">
 						Premium Web Development, DevOps, and AI integrations to help your
-						business stand out. Solutions sur-mesure pour vos besoins.
+						business stand out. Tailor-made solutions for your needs.
 					</p>
 
 					<a

@@ -28,7 +28,7 @@ const projects = [
 	},
 	{
 		category: "DEVOPS",
-		title: "Projet DevOps",
+		title: "DevOps Project",
 		description:
 			"CI/CD pipelines, Docker deployment, Spring Boot testing with Mockito, SonarQube, Prometheus & Grafana.",
 		imageUrl: "chatAI.png",
@@ -40,11 +40,11 @@ export function Projects() {
 	return (
 		<section
 			id="projects"
-			className="py-24 border-t border-primary bg-bg-secondary"
+			className="py-16 sm:py-20 lg:py-24 border-t border-primary bg-bg-secondary"
 		>
 			<div className="max-w-7xl mx-auto px-6">
 				<div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
-					<h2 className="text-4xl md:text-4xl text-text-secondary font-medium uppercase font-heading">
+					<h2 className="text-3xl sm:text-4xl text-text-secondary font-medium uppercase font-heading">
 						Projects
 					</h2>
 					<a

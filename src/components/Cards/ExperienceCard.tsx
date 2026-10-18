@@ -19,7 +19,7 @@ function ExperienceCard({
 	side,
 }: ExperienceCardProps) {
 	return (
-		<div className="relative pb-16 flex flex-col md:flex-row items-start md:items-center group">
+		<div className="relative pb-12 sm:pb-16 flex flex-col md:flex-row items-start md:items-center group">
 			{side === "left" ? (
 				<>
 					<div className="hidden md:flex flex-1 justify-end md:pr-20 text-right">

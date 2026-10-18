@@ -4,9 +4,9 @@ const experiences = [
 	{
 		date: "Apr 2025 - Nov 2025",
 		company: "Echo Parrot | Onrtech",
-		role: "Stage de fin d'études",
+		role: "End-of-Studies Internship",
 		description:
-			"Développement d'une plateforme SaaS VoIP intégrant des agents IA capables d'interagir avec les clients. Conception d'un microservice RAG modulaire avec FastAPI, ChromaDB et FAISS, réduisant de 60 à 90% le temps de recherche.",
+			"Development of a VoIP SaaS platform integrating AI agents capable of interacting with customers. Built a modular RAG microservice with FastAPI, ChromaDB, and FAISS, reducing search times by 60 to 90%.",
 		technologies: [
 			"RAG & LLM Generation",
 			"Real-time sync via Socket.IO",
@@ -17,18 +17,18 @@ const experiences = [
 	{
 		date: "Nov 2024 - Dec 2024",
 		company: "Kreatek",
-		role: "Stage d'immersion",
+		role: "Immersion Internship",
 		description:
-			"Participation au développement de plateformes de gestion hôtelière. Création d'interfaces administratives permettant la consultation et modification des entités, ainsi qu'un dashboard multipage.",
+			"Contributed to the development of hotel management platforms. Created administrative interfaces for viewing and updating entities, along with a multi-page dashboard.",
 		technologies: ["Full-Stack Web", "Data Visualization with Charts"],
 		side: "right" as const,
 	},
 	{
 		date: "Jul 2024 - Sep 2024",
 		company: "Royal Absu | Kreatek",
-		role: "Stage ingénieur",
+		role: "Engineering Internship",
 		description:
-			"Développement d'une interface de check-in multipage pour hôtel, permettant la saisie du nombre de chambres et gestion des résidents avec ID Scan selon l'âge.",
+			"Developed a multi-page hotel check-in interface for entering room counts and managing guests with age-based ID scanning.",
 		technologies: [
 			"React 18.3 & Vite",
 			"Express.js & MySQL",
@@ -39,9 +39,9 @@ const experiences = [
 	{
 		date: "Aug 2023 - Sep 2023",
 		company: "Orange",
-		role: "Stage d'été",
+		role: "Summer Internship",
 		description:
-			"Développement et maintenance d'une plateforme web dédiée à la gestion des réseaux de transport optique, offrant la surveillance et la gestion des incidents.",
+			"Developed and maintained a web platform dedicated to managing optical transport networks, providing network monitoring and incident management.",
 		technologies: ["Python 3.10 & Django 4.2", "Docker, Jenkins & Pytest"],
 		side: "right" as const,
 	},
@@ -51,19 +51,19 @@ export function Experience() {
 	return (
 		<section
 			id="experience"
-			className="py-20 space-y-20 border-t border-primary relative bg-bg-primary"
+			className="py-16 sm:py-20 space-y-16 sm:space-y-20 border-t border-primary relative bg-bg-primary"
 		>
 			<div className="text-center max-w-4xl mx-auto px-6">
 				<div className="text-[11px] tracking-[0.2em] uppercase text-text-subtle mb-6">
 					THE PROCESS
 				</div>
-				<h2 className="font-display text-5xl md:text-7xl mb-8">
+				<h2 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-8">
 					Your Website <br />
 					<span className="italic text-text-secondary">in 4 steps</span>
 				</h2>
 				<p className="text-text-muted max-w-lg mx-auto font-light leading-relaxed">
-					Mon parcours professionnel assure une création méthodique et experte
-					de vos projets numériques.
+					My professional journey ensures a methodical and expert approach to
+					bringing your digital projects to life.
 				</p>
 			</div>
 

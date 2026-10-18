@@ -8,7 +8,6 @@ export function About() {
 		>
 			<h2 className="font-display text-[34px] md:text-5xl lg:text-7xl mb-4 md:mb-8">
 				A website that leaves <br />
-				secondary
 				<span className="italic text-text-secondary">
 					a lasting impression!
 				</span>

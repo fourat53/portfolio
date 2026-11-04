@@ -1,4 +1,5 @@
 import { ServiceCard } from "@/components/Cards/ServiceCard";
+import { Reveal } from "@/components/Reveal";
 
 const services = [
 	{
@@ -34,8 +35,15 @@ export function Services() {
 			className="py-16 sm:py-24 md:py-32 max-w-7xl mx-auto px-6"
 		>
 			<div className="grid md:grid-cols-3 gap-6">
-				{services.map((service) => (
-					<ServiceCard key={service.number} {...service} />
+				{services.map((service, index) => (
+					<Reveal
+						key={service.number}
+						variant={index === 0 ? "left" : index === 1 ? "up" : "right"}
+						delay={index * 140}
+						className="h-full"
+					>
+						<ServiceCard {...service} className="h-full" />
+					</Reveal>
 				))}
 			</div>
 		</section>

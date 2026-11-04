@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import favicon from "/favicon.svg";
+import favicon from "/icons/favicon.svg";
 
 export default function Logo({ size }: { size: number }) {
 	return (

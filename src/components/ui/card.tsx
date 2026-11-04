@@ -23,15 +23,25 @@ const variantClasses = {
 		"bg-bg-primary overflow-hidden relative border border-primary hover:shadow-md hover:translate-y-[-2px] hover:translate-x-[-1px]",
 };
 
+const hoverClasses =
+	"hover:shadow-md hover:translate-y-[-2px] hover:translate-x-[-1px] hover:bg-bg-card-hover";
+
 export const Card = forwardRef<HTMLDivElement, CardProps>(
 	(
-		{ variant = "default", padding = "md", children, className = "", ...props },
+		{
+			variant = "default",
+			padding = "md",
+			hover,
+			children,
+			className = "",
+			...props
+		},
 		ref,
 	) => {
 		return (
 			<div
 				ref={ref}
-				className={`${variantClasses[variant]} ${paddingClasses[padding]} transition-all duration-300 ${className}`}
+				className={`${variantClasses[variant]} ${hover ? hoverClasses : ""} ${paddingClasses[padding]} transition-all duration-300 ${className}`}
 				{...props}
 			>
 				{children}

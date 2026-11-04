@@ -1,4 +1,5 @@
 import { ExperienceCard } from "@/components/Cards/ExperienceCard";
+import { Reveal } from "@/components/Reveal";
 
 const experiences = [
 	{
@@ -54,25 +55,41 @@ export function Experience() {
 			className="py-16 sm:py-20 space-y-16 sm:space-y-20 border-t border-primary relative bg-bg-primary"
 		>
 			<div className="text-center max-w-4xl mx-auto px-6">
-				<div className="text-[11px] tracking-[0.2em] uppercase text-text-subtle mb-6">
-					THE PROCESS
-				</div>
-				<h2 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-8">
-					Your Website <br />
-					<span className="italic text-text-secondary">in 4 steps</span>
-				</h2>
-				<p className="text-text-muted max-w-lg mx-auto font-light leading-relaxed">
-					My professional journey ensures a methodical and expert approach to
-					bringing your digital projects to life.
-				</p>
+				<Reveal variant="scale">
+					<div>
+						<div className="text-[11px] tracking-[0.2em] uppercase text-text-subtle mb-6">
+							THE PROCESS
+						</div>
+						<h2 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-8">
+							Your Website <br />
+							<span className="italic text-text-secondary">in 4 steps</span>
+						</h2>
+						<p className="text-text-muted max-w-lg mx-auto font-light leading-relaxed">
+							My professional journey ensures a methodical and expert approach
+							to bringing your digital projects to life.
+						</p>
+					</div>
+				</Reveal>
 			</div>
 
 			<div className="max-w-5xl mx-auto px-6 relative">
 				{/* Vertical Line */}
-				<div className="max-md:hidden absolute left-10 md:left-1/2 -top-8 bottom-0 w-px bg-text-secondary md:-translate-x-1/2" />
+				<div
+					className="max-md:hidden absolute left-10 md:left-1/2 -top-8 bottom-0 w-px md:-translate-x-1/2"
+					style={{
+						background:
+							"linear-gradient(to bottom, transparent, var(--text-secondary) 12%, var(--accent-primary) 88%, transparent)",
+					}}
+				/>
 
 				{experiences.map((exp, i) => (
-					<ExperienceCard key={i} number={`0${i + 1}`} {...exp} />
+					<Reveal
+						key={i}
+						variant={exp.side === "left" ? "left" : "right"}
+						delay={60}
+					>
+						<ExperienceCard number={`0${i + 1}`} {...exp} />
+					</Reveal>
 				))}
 			</div>
 		</section>

@@ -7,6 +7,7 @@ import { Services } from "#/Home/Services";
 import { TechStack } from "#/Home/TechStack";
 import { Footer } from "#/layout/Footer.tsx";
 import { Navbar } from "#/layout/Navbar.tsx";
+import { ScrollProgress } from "@/components/ScrollProgress";
 
 export const Route = createFileRoute("/")({
 	component: Home,
@@ -15,6 +16,7 @@ export const Route = createFileRoute("/")({
 function Home() {
 	return (
 		<div className="min-h-screen font-sans overflow-x-hidden bg-bg-primary">
+			<ScrollProgress />
 			<Navbar />
 			<main>
 				<Hero />

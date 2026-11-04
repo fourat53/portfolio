@@ -1,27 +1,22 @@
+import { useTheme } from "#/lib/theme-context.tsx";
 import { Card } from "@/components/ui/card";
 
 interface ProjectCardProps {
 	category: string;
 	title: string;
 	description: string;
-	imageUrl?: string;
 	link?: string;
 }
 
-function ProjectCard({
-	category,
-	title,
-	description,
-	imageUrl,
-	link,
-}: ProjectCardProps) {
+function ProjectCard({ category, title, description, link }: ProjectCardProps) {
+	const { theme } = useTheme();
 	return (
 		<Card variant="project" className="group">
 			<div className="z-20 flex flex-col justify-between">
 				<img
 					alt="project-picture"
-					src={imageUrl}
-					className="w-full h-[50%] border"
+					src={`screenshots/${title}/${theme}-1.png`}
+					className="w-full h--1/2 border"
 				/>
 				<a
 					href={link}

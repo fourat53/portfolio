@@ -22,14 +22,14 @@ const projects: ProjectCardProps[] = [
 		imageNumber: 2,
 		link: "https://ai-chat-front-mauve.vercel.app/",
 	},
-	// {
-	// 	category: "FULL-STACK WEB & AI",
-	// 	title: "Echo Parrot",
-	// 	imageNumber: 3,
-	// 	description:
-	// 		"SaaS VoIP platform with FastAPI, ChromaDB, and FAISS. Features real-time chat, RAG microservice, and AI agents for customer interaction.",
-	// 	link: "https://ai-chat-front-mauve.vercel.app/",
-	// },
+	{
+		category: "FULL-STACK WEB & AI",
+		title: "Echo Parrot",
+		imageNumber: 6,
+		description:
+			"SaaS VoIP platform with FastAPI, ChromaDB, and FAISS. Features real-time chat, RAG microservice, and AI agents for customer interaction.",
+		link: "https://echoparrot.com/en/",
+	},
 	// {
 	// 	category: "DEVOPS",
 	// 	title: "DevOps Project",

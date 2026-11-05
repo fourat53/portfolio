@@ -35,7 +35,6 @@ export function Footer() {
 				<div className="flex flex-col md:flex-row justify-between gap-12">
 					<div>
 						<p className="font-medium flex gap-3 items-center text-sm tracking-[0.15em] uppercase text-text-primary">
-							{/* <Logo size={34} /> */}
 							Fourat Taktak
 						</p>
 						<p className="mt-3 max-w-sm text-xs leading-relaxed tracking-wide text-text-subtle">

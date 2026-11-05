@@ -55,7 +55,7 @@ function ProjectCard({
 					href={link}
 					target="_blank"
 					rel="noopener noreferrer"
-					className="text-xl hover:underline sm:text-3xl text-text-secondary group-hover:text-accent-secondary transition-colors font-medium font-display"
+					className="text-xl group-hover:underline sm:text-3xl text-text-secondary group-hover:text-accent-secondary transition-colors font-medium font-display"
 				>
 					{title}
 				</a>

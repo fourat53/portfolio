@@ -1,5 +1,12 @@
 import { useTheme } from "#/lib/theme-context.tsx";
 import { Card } from "@/components/ui/card";
+import {
+	Carousel,
+	CarouselContent,
+	CarouselItem,
+	CarouselNext,
+	CarouselPrevious,
+} from "@/components/ui/carousel";
 
 interface ProjectCardProps {
 	category: string;
@@ -20,11 +27,30 @@ function ProjectCard({
 	return (
 		<Card variant="project" className="group">
 			<div className="z-20 flex flex-col justify-between">
-				<img
-					alt="project-picture"
-					src={`screenshots/${title}/${theme}-${imageNumber}.png`}
-					className="w-full h-1/2 border"
-				/>
+				<Carousel
+					className="w-full"
+					opts={{ align: "start", loop: true }}
+					aria-label={`${title} screenshots`}
+				>
+					<CarouselContent className="ms-0">
+						{Array.from({ length: imageNumber }).map((_, i) => (
+							<CarouselItem key={i} className="ps-0 w-full border">
+								<img
+									alt={`${title} ${i + 1}`}
+									src={`screenshots/${encodeURIComponent(title)}/${theme}-${i + 1}.png`}
+									draggable={false}
+									className="aspect-video w-full object-cover"
+								/>
+							</CarouselItem>
+						))}
+					</CarouselContent>
+					{imageNumber > 1 && (
+						<>
+							<CarouselPrevious className="inset-s-2 border-border/50 bg-background/80 text-text-primary backdrop-blur-sm hover:bg-background" />
+							<CarouselNext className="inset-e-2 border-border/50 bg-background/80 text-text-primary backdrop-blur-sm hover:bg-background" />
+						</>
+					)}
+				</Carousel>
 				<a
 					href={link}
 					target="_blank"

@@ -11,7 +11,7 @@ const projects: ProjectCardProps[] = [
 		title: "Shopofort",
 		description:
 			"E-commerce platform with Next.js, Prisma, and Kinde Auth. Featuring a dynamic catalog, dashboard, and Zod validation.",
-		imageNumber: 3,
+		imageNumber: 5,
 		link: "https://shopofort.vercel.app/",
 	},
 	{
@@ -22,22 +22,22 @@ const projects: ProjectCardProps[] = [
 		imageNumber: 2,
 		link: "https://ai-chat-front-mauve.vercel.app/",
 	},
-	{
-		category: "FULL-STACK WEB & AI",
-		title: "Echo Parrot",
-		imageNumber: 3,
-		description:
-			"SaaS VoIP platform with FastAPI, ChromaDB, and FAISS. Features real-time chat, RAG microservice, and AI agents for customer interaction.",
-		link: "https://ai-chat-front-mauve.vercel.app/",
-	},
-	{
-		category: "DEVOPS",
-		title: "DevOps Project",
-		description:
-			"CI/CD pipelines, Docker deployment, Spring Boot testing with Mockito, SonarQube, Prometheus & Grafana.",
-		imageNumber: 2,
-		link: "https://ai-chat-front-mauve.vercel.app/",
-	},
+	// {
+	// 	category: "FULL-STACK WEB & AI",
+	// 	title: "Echo Parrot",
+	// 	imageNumber: 3,
+	// 	description:
+	// 		"SaaS VoIP platform with FastAPI, ChromaDB, and FAISS. Features real-time chat, RAG microservice, and AI agents for customer interaction.",
+	// 	link: "https://ai-chat-front-mauve.vercel.app/",
+	// },
+	// {
+	// 	category: "DEVOPS",
+	// 	title: "DevOps Project",
+	// 	description:
+	// 		"CI/CD pipelines, Docker deployment, Spring Boot testing with Mockito, SonarQube, Prometheus & Grafana.",
+	// 	imageNumber: 2,
+	// 	link: "https://ai-chat-front-mauve.vercel.app/",
+	// },
 ];
 
 export function Projects() {

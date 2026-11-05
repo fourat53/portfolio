@@ -24,8 +24,23 @@
 		"enabled": true,
 		"rules": {
 			"preset": "recommended",
+			"style": { "useTemplate": "off" },
 			"suspicious": {
-				"noArrayIndexKey": "off"
+				"noArrayIndexKey": "off",
+				"noDocumentCookie": "off"
+			},
+			"a11y": {
+				"noLabelWithoutControl": "off",
+				"useSemanticElements": "off",
+				"useKeyWithClickEvents": "off"
+			},
+			"correctness": {
+				"noUnknownPseudoClass": {
+					"level": "error",
+					"options": {
+						"ignore": ["global"]
+					}
+				}
 			}
 		}
 	},

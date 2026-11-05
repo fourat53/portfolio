@@ -1,27 +1,33 @@
 import { IconArrowRight } from "@tabler/icons-react";
-import { ProjectCard } from "@/components/Cards/ProjectCard";
+import {
+	ProjectCard,
+	type ProjectCardProps,
+} from "@/components/Cards/ProjectCard";
 import { Reveal } from "@/components/Reveal";
 
-const projects = [
+const projects: ProjectCardProps[] = [
 	{
 		category: "FULL-STACK WEB",
 		title: "Shopofort",
 		description:
 			"E-commerce platform with Next.js, Prisma, and Kinde Auth. Featuring a dynamic catalog, dashboard, and Zod validation.",
+		imageNumber: 3,
 		link: "https://shopofort.vercel.app/",
-	},
-	{
-		category: "FULL-STACK WEB & AI",
-		title: "Echo Parrot",
-		description:
-			"SaaS VoIP platform with FastAPI, ChromaDB, and FAISS. Features real-time chat, RAG microservice, and AI agents for customer interaction.",
-		link: "https://ai-chat-front-mauve.vercel.app/",
 	},
 	{
 		category: "FULL-STACK WEB & AI",
 		title: "Chat AI",
 		description:
 			"RAG system with LangChain, Pinecone, Gemini, and FastAPI for semantic search and AI generation.",
+		imageNumber: 2,
+		link: "https://ai-chat-front-mauve.vercel.app/",
+	},
+	{
+		category: "FULL-STACK WEB & AI",
+		title: "Echo Parrot",
+		imageNumber: 3,
+		description:
+			"SaaS VoIP platform with FastAPI, ChromaDB, and FAISS. Features real-time chat, RAG microservice, and AI agents for customer interaction.",
 		link: "https://ai-chat-front-mauve.vercel.app/",
 	},
 	{
@@ -29,6 +35,7 @@ const projects = [
 		title: "DevOps Project",
 		description:
 			"CI/CD pipelines, Docker deployment, Spring Boot testing with Mockito, SonarQube, Prometheus & Grafana.",
+		imageNumber: 2,
 		link: "https://ai-chat-front-mauve.vercel.app/",
 	},
 ];

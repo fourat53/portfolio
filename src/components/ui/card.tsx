@@ -24,7 +24,7 @@ const variantClasses = {
 };
 
 const hoverClasses =
-	"hover:shadow-md hover:translate-y-[-2px] hover:translate-x-[-1px] hover:bg-bg-card-hover";
+	"hover:shadow-md hover:translate-y-[-2px] hover:translate-x-[-1px] hover:bg-bg-card";
 
 export const Card = forwardRef<HTMLDivElement, CardProps>(
 	(

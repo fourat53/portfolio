@@ -5,18 +5,25 @@ interface ProjectCardProps {
 	category: string;
 	title: string;
 	description: string;
+	imageNumber: number;
 	link?: string;
 }
 
-function ProjectCard({ category, title, description, link }: ProjectCardProps) {
+function ProjectCard({
+	category,
+	title,
+	description,
+	imageNumber,
+	link,
+}: ProjectCardProps) {
 	const { theme } = useTheme();
 	return (
 		<Card variant="project" className="group">
 			<div className="z-20 flex flex-col justify-between">
 				<img
 					alt="project-picture"
-					src={`screenshots/${title}/${theme}-1.png`}
-					className="w-full h--1/2 border"
+					src={`screenshots/${title}/${theme}-${imageNumber}.png`}
+					className="w-full h-1/2 border"
 				/>
 				<a
 					href={link}

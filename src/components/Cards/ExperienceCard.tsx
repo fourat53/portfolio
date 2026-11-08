@@ -3,6 +3,7 @@ interface ExperienceCardProps {
 	date: string;
 	company: string;
 	role: string;
+	location: string;
 	description: string;
 	technologies: string[];
 	side: "left" | "right";
@@ -14,6 +15,7 @@ function ExperienceCard({
 	date,
 	company,
 	role,
+	location,
 	description,
 	technologies,
 	side,
@@ -31,6 +33,7 @@ function ExperienceCard({
 								{company}
 							</h4>
 							<div className="text-sm text-stone-500">{role}</div>
+							<div className="text-xs text-text-subtle mt-1">{location}</div>
 						</div>
 					</div>
 					<div className="md:absolute md:left-1/2 translate-y-9.5 md:-translate-x-1/2 w-8 h-8 bg-bg-secondary border group-hover:border-primary rounded-full z-10 flex items-center justify-center transition-colors">
@@ -46,6 +49,8 @@ function ExperienceCard({
 							<h4 className="text-xl uppercase tracking-widest mb-1 text-text-primary font-light">
 								{company}
 							</h4>
+							<div className="text-sm text-stone-500">{role}</div>
+							<div className="text-xs text-text-subtle mt-1">{location}</div>
 						</div>
 						<p className="text-sm text-stone-400 mb-6 font-light leading-relaxed">
 							{description}
@@ -67,6 +72,8 @@ function ExperienceCard({
 							<h4 className="text-xl uppercase tracking-widest mb-1 text-text-primary font-light">
 								{company}
 							</h4>
+							<div className="text-sm text-stone-500">{role}</div>
+							<div className="text-xs text-text-subtle mt-1">{location}</div>
 						</div>
 						<p className="text-sm text-stone-400 mb-6 font-light leading-relaxed">
 							{description}
@@ -91,6 +98,7 @@ function ExperienceCard({
 								{company}
 							</h4>
 							<div className="text-sm text-stone-500">{role}</div>
+							<div className="text-xs text-text-subtle mt-1">{location}</div>
 						</div>
 					</div>
 				</>

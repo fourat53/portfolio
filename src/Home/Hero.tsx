@@ -87,7 +87,7 @@ export function Hero() {
 								className="block italic text-text-secondary"
 								variants={secondLineVariants}
 							>
-								& Full-Stack Web
+								& Full-Stack Developer
 							</motion.span>
 						</span>
 					</h1>
@@ -96,8 +96,10 @@ export function Hero() {
 						className="mb-4 md:mb-12 max-w-2xl text-sm font-light leading-relaxed text-text-muted md:text-base"
 						variants={copyVariants}
 					>
-						Premium Web Development, DevOps, and AI integrations to help your
-						business stand out. Tailor-made solutions for your needs.
+						Software engineer with hands-on experience in full-stack
+						development, DevOps, and AI. I build premium web applications,
+						reliable delivery pipelines, and intelligent features like RAG
+						systems and AI agents, tailored to your business needs.
 					</motion.p>
 
 					<motion.a

@@ -3,6 +3,8 @@ import {
 	IconBrandGithub,
 	IconBrandGitlab,
 	IconBrandLinkedin,
+	IconMail,
+	IconPhone,
 } from "@tabler/icons-react";
 
 const socials = [
@@ -21,6 +23,16 @@ const socials = [
 		label: "GitLab",
 		icon: IconBrandGitlab,
 	},
+	{
+		href: "mailto:fourat610654@gmail.com",
+		label: "Email",
+		icon: IconMail,
+	},
+	{
+		href: "tel:+21653610654",
+		label: "Phone",
+		icon: IconPhone,
+	},
 ];
 
 export function Footer() {
@@ -38,8 +50,8 @@ export function Footer() {
 							Fourat Taktak
 						</p>
 						<p className="mt-3 max-w-sm text-xs leading-relaxed tracking-wide text-text-subtle">
-							Software engineer specializing in modern web application
-							development.
+							Software engineer specializing in full-stack web development,
+							DevOps, and AI integrations.
 						</p>
 					</div>
 					<div className="flex flex-col gap-4">
@@ -54,8 +66,12 @@ export function Footer() {
 									<a
 										key={social.href}
 										href={social.href}
-										target="_blank"
-										rel="noreferrer"
+										target={
+											social.href.startsWith("http") ? "_blank" : undefined
+										}
+										rel={
+											social.href.startsWith("http") ? "noreferrer" : undefined
+										}
 										className="text-text-secondary hover:text-accent-secondary group flex font-medium items-center gap-2 text-xs uppercase tracking-[0.12em] transition-colors"
 									>
 										<Icon

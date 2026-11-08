@@ -6,25 +6,25 @@ const services = [
 		number: "01",
 		title: "Frontend",
 		description:
-			"Visually stunning web designs that captivate your audience using React, Next.js, and modern UI libraries like Tailwind CSS and Framer Motion.",
-		linkText: "ABOUT FRONTEND",
-		linkHref: "/",
+			"Visually stunning, responsive interfaces built with React, Next.js, TanStack Start, Tailwind CSS, shadcn/ui, Ant Design, and Framer Motion.",
+		linkText: "SEE FRONTEND WORK",
+		linkHref: "#projects",
 	},
 	{
 		number: "02",
 		title: "Backend",
 		description:
-			"Robust custom web development and microservices tailored to your specifications with FastAPI, Spring Boot, and Express.js.",
-		linkText: "ABOUT BACKEND",
-		linkHref: "/",
+			"Robust APIs, microservices, and databases tailored to your specifications with Express.js, NestJS, FastAPI, Spring Boot, Django, JWT, OAuth2, Swagger, and SQL or NoSQL storage.",
+		linkText: "SEE BACKEND WORK",
+		linkHref: "#projects",
 	},
 	{
 		number: "03",
 		title: "DevOps & AI",
 		description:
-			"Enhancing performance and integrating cutting-edge AI (RAG, LLMs) to bring your platform to the forefront of technology.",
-		linkText: "ABOUT DEVOPS & AI",
-		linkHref: "/",
+			"Reliable delivery with Docker, Jenkins, GitLab CI/CD, and Linux, plus cutting-edge AI integrations such as RAG, LLMs, prompt engineering, and MCP.",
+		linkText: "SEE DEVOPS & AI WORK",
+		linkHref: "#projects",
 	},
 ];
 

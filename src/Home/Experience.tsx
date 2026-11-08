@@ -6,12 +6,16 @@ const experiences = [
 		date: "Apr 2025 - Nov 2025",
 		company: "Echo Parrot | Onrtech",
 		role: "End-of-Studies Internship",
+		location: "Sousse, Tunisia",
 		description:
-			"Development of a VoIP SaaS platform integrating AI agents capable of interacting with customers. Built a modular RAG microservice with FastAPI, ChromaDB, and FAISS, reducing search times by 60 to 90%.",
+			"Developed a VoIP SaaS platform with AI agents that interact with customers. Built an animated SSG showcase website and a responsive filtered dashboard, added real-time Socket.IO updates, multi-format ingestion pipelines (PDF, DOCX, audio, images, URLs), Google Calendar, Drive, and Sheets integrations, AWS S3 storage, AI assistant modules and voices, and a modular FastAPI RAG microservice with ChromaDB and FAISS that reduced search time by 60 to 90%.",
 		technologies: [
-			"RAG & LLM Generation",
-			"Real-time sync via Socket.IO",
-			"Multi-format data ingestion",
+			"TypeScript 5, Next.js 15.5 & React",
+			"FastAPI, Express.js & Python 3.11",
+			"MongoDB, ChromaDB & FAISS",
+			"RAG, LangChain & Socket.IO",
+			"AWS S3, Google APIs & AI voice assistants",
+			"Redux, SWR, Tailwind CSS, shadcn/ui & Framer Motion",
 		],
 		side: "left" as const,
 	},
@@ -19,21 +23,28 @@ const experiences = [
 		date: "Nov 2024 - Dec 2024",
 		company: "Kreatek",
 		role: "Immersion Internship",
+		location: "Tunis, Tunisia",
 		description:
-			"Contributed to the development of hotel management platforms. Created administrative interfaces for viewing and updating entities, along with a multi-page dashboard.",
-		technologies: ["Full-Stack Web", "Data Visualization with Charts"],
+			"Contributed to the development of multiple hotel management platforms. Built administrative interfaces for viewing, creating, and updating entities, plus a multi-page dashboard with charts to visualize sales performance across filters.",
+		technologies: [
+			"JavaScript ES6+, React 18.3 & Vite",
+			"Express.js, NestJS & MySQL/MongoDB",
+			"Redux & Ant Design",
+		],
 		side: "right" as const,
 	},
 	{
 		date: "Jul 2024 - Sep 2024",
 		company: "Royal Absu | Kreatek",
 		role: "Engineering Internship",
+		location: "Tunis, Tunisia",
 		description:
-			"Developed a multi-page hotel check-in interface for entering room counts and managing guests with age-based ID scanning.",
+			"Developed a multi-page check-in interface for Hotel Royal Absu to enter room and resident counts and manage guest information with age-based ID scanning. Added JWT authentication and advanced admin interfaces for rooms, check-ins, and residents.",
 		technologies: [
-			"React 18.3 & Vite",
-			"Express.js & MySQL",
-			"Scandit ID Bolt & JWT Auth",
+			"TypeScript 5, React 18.3 & Vite",
+			"Express.js, MySQL & JWT",
+			"Scandit ID Bolt, Redux & Ant Design",
+			"Framer Motion, Formik & i18n",
 		],
 		side: "left" as const,
 	},
@@ -41,9 +52,14 @@ const experiences = [
 		date: "Aug 2023 - Sep 2023",
 		company: "Orange",
 		role: "Summer Internship",
+		location: "Tunis, Tunisia",
 		description:
-			"Developed and maintained a web platform dedicated to managing optical transport networks, providing network monitoring and incident management.",
-		technologies: ["Python 3.10 & Django 4.2", "Docker, Jenkins & Pytest"],
+			"Developed and maintained a web platform for managing optical transport networks (OTN), with network monitoring and incident management to ensure system reliability.",
+		technologies: [
+			"Python 3.10 & Django 4.2",
+			"MySQL, Docker & Jenkins",
+			"Pytest & GitLab",
+		],
 		side: "right" as const,
 	},
 ];
@@ -58,15 +74,18 @@ export function Experience() {
 				<Reveal variant="scale">
 					<div>
 						<div className="text-[11px] tracking-[0.2em] uppercase text-text-subtle mb-6">
-							THE PROCESS
+							EXPERIENCE
 						</div>
 						<h2 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-8">
-							Your Website <br />
-							<span className="italic text-text-secondary">in 4 steps</span>
+							My professional <br />
+							<span className="italic text-text-secondary">
+								journey in 4 steps
+							</span>
 						</h2>
 						<p className="text-text-muted max-w-lg mx-auto font-light leading-relaxed">
-							My professional journey ensures a methodical and expert approach
-							to bringing your digital projects to life.
+							Four internships across full-stack development, DevOps, and AI
+							that shaped a methodical and expert approach to building digital
+							products.
 						</p>
 					</div>
 				</Reveal>

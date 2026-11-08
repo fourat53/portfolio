@@ -46,8 +46,8 @@ function ProjectCard({
 					</CarouselContent>
 					{imageNumber > 1 && (
 						<>
-							<CarouselPrevious className="inset-s-2 border-border/50 bg-background/80 text-text-primary backdrop-blur-sm hover:bg-background" />
-							<CarouselNext className="inset-e-2 border-border/50 bg-background/80 text-text-primary backdrop-blur-sm hover:bg-background" />
+							<CarouselPrevious />
+							<CarouselNext />
 						</>
 					)}
 				</Carousel>
@@ -59,7 +59,9 @@ function ProjectCard({
 				>
 					{title}
 				</a>
-				<p className="text-sm text-stone-400 font-light">{description}</p>
+				<p className="text-xs sm:text-sm text-stone-400 font-light">
+					{description}
+				</p>
 
 				<span className="absolute top-3 right-4 w-fit text-[10px] tracking-[0.2em] uppercase text-stone-500 border border-white/10 px-3 py-1 rounded-full bg-background backdrop-blur-md">
 					{category}

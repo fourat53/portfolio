@@ -4,8 +4,11 @@ import {
 	IconBrandGitlab,
 	IconBrandLinkedin,
 	IconMail,
+	IconMapPin,
 	IconPhone,
 } from "@tabler/icons-react";
+import { motion, type Variants } from "motion/react";
+import { scrollToTop } from "@/lib/utils";
 
 const socials = [
 	{
@@ -35,26 +38,95 @@ const socials = [
 	},
 ];
 
+const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
+
+const footerVariants: Variants = {
+	hidden: {},
+	visible: {
+		transition: { staggerChildren: 0.09, delayChildren: 0.1 },
+	},
+};
+
+const accentLineVariants: Variants = {
+	hidden: { opacity: 0, scaleX: 0 },
+	visible: {
+		opacity: 1,
+		scaleX: 1,
+		transition: { duration: 1.1, ease: EASE },
+	},
+};
+
+const slideLeftVariants: Variants = {
+	hidden: { opacity: 0, x: -32 },
+	visible: {
+		opacity: 1,
+		x: 0,
+		transition: { duration: 0.75, ease: EASE },
+	},
+};
+
+const connectVariants: Variants = {
+	hidden: { opacity: 0, x: 32 },
+	visible: {
+		opacity: 1,
+		x: 0,
+		transition: {
+			duration: 0.75,
+			ease: EASE,
+			staggerChildren: 0.06,
+			delayChildren: 0.15,
+		},
+	},
+};
+
+const fadeUpVariants: Variants = {
+	hidden: { opacity: 0, y: 22, filter: "blur(4px)" },
+	visible: {
+		opacity: 1,
+		y: 0,
+		filter: "blur(0px)",
+		transition: { duration: 0.7, ease: EASE },
+	},
+};
+
 export function Footer() {
 	const year = new Date().getFullYear();
 
 	return (
-		<footer
+		<motion.footer
 			id="contact"
-			className="bg-bg-primary border-t border-primary px-6 sm:px-10 py-12 sm:py-16 md:py-20"
+			initial="hidden"
+			whileInView="visible"
+			viewport={{ once: true, amount: 0.2 }}
+			variants={footerVariants}
+			className="relative overflow-hidden border-t border-primary bg-bg-primary px-6 py-12 sm:px-10 sm:py-16 md:py-20"
 		>
-			<div className="max-w-7xl mx-auto">
-				<div className="flex flex-col md:flex-row justify-between gap-12">
-					<div>
-						<p className="font-medium flex gap-3 items-center text-sm tracking-[0.15em] uppercase text-text-primary">
+			<motion.div
+				aria-hidden="true"
+				variants={accentLineVariants}
+				className="pointer-events-none absolute inset-x-0 top-0 h-px origin-left bg-linear-to-r from-transparent via-accent-primary to-transparent"
+			/>
+
+			<div className="mx-auto max-w-7xl">
+				<div className="flex flex-col justify-between gap-12 md:flex-row">
+					<motion.div variants={slideLeftVariants}>
+						<p className="flex items-center gap-3 text-sm font-medium tracking-[0.15em] uppercase text-text-primary">
 							Fourat Taktak
 						</p>
 						<p className="mt-3 max-w-sm text-xs leading-relaxed tracking-wide text-text-subtle">
 							Software engineer specializing in full-stack web development,
 							DevOps, and AI integrations.
 						</p>
-					</div>
-					<div className="flex flex-col gap-4">
+						<p className="mt-4 flex items-center gap-2 text-[10px] uppercase tracking-[0.16em] text-text-subtle">
+							<IconMapPin size={13} stroke={1.5} />
+							Based in Tunisia
+						</p>
+					</motion.div>
+
+					<motion.div
+						variants={connectVariants}
+						className="flex flex-col gap-4"
+					>
 						<span className="text-[10px] font-medium tracking-[0.2em] uppercase text-foreground">
 							Connect
 						</span>
@@ -63,7 +135,7 @@ export function Footer() {
 							{socials.map((social) => {
 								const Icon = social.icon;
 								return (
-									<a
+									<motion.a
 										key={social.href}
 										href={social.href}
 										target={
@@ -72,7 +144,9 @@ export function Footer() {
 										rel={
 											social.href.startsWith("http") ? "noreferrer" : undefined
 										}
-										className="text-text-secondary hover:text-accent-secondary group flex font-medium items-center gap-2 text-xs uppercase tracking-[0.12em] transition-colors"
+										variants={fadeUpVariants}
+										whileHover={{ x: 4 }}
+										className="group flex items-center gap-2 text-xs font-medium uppercase tracking-[0.12em] text-text-secondary transition-colors hover:text-accent-secondary"
 									>
 										<Icon
 											size={15}
@@ -80,23 +154,24 @@ export function Footer() {
 											className="transition-transform group-hover:scale-110"
 										/>
 										{social.label}
-									</a>
+									</motion.a>
 								);
 							})}
 						</div>
-					</div>
+					</motion.div>
 				</div>
-				<div className="mt-12 sm:mt-16 pt-6 border-t flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-[10px] tracking-[0.18em] uppercase text-text-subtle">
+
+				<motion.div
+					variants={fadeUpVariants}
+					className="mt-12 flex flex-col items-start justify-between gap-4 border-t pt-6 text-[10px] uppercase tracking-[0.18em] text-text-subtle sm:mt-16 sm:flex-row sm:items-center"
+				>
 					<span>© {year} Fourat Taktak</span>
-					<button
+					<motion.button
 						type="button"
-						onClick={() =>
-							window.scrollTo({
-								top: 0,
-								behavior: "smooth",
-							})
-						}
-						className="group flex items-center gap-2 transition-colors hover:text-text-primary"
+						onClick={scrollToTop}
+						whileHover={{ y: -2 }}
+						whileTap={{ scale: 0.97 }}
+						className="group flex cursor-pointer items-center gap-2 transition-colors hover:text-text-primary"
 					>
 						Back to top
 						<IconArrowRight
@@ -104,9 +179,9 @@ export function Footer() {
 							stroke={1.5}
 							className="-rotate-90 transition-transform group-hover:-translate-y-0.5"
 						/>
-					</button>
-				</div>
+					</motion.button>
+				</motion.div>
 			</div>
-		</footer>
+		</motion.footer>
 	);
 }

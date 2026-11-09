@@ -30,10 +30,8 @@ const visiblePoses: Record<RevealVariant, Pose> = {
 interface RevealProps {
 	children: ReactNode;
 	variant?: RevealVariant;
-	/** Delay in milliseconds before the reveal starts (for staggering siblings). */
 	delay?: number;
 	className?: string;
-	/** How much of the element must be visible before it animates (0-1). */
 	amount?: number;
 }
 

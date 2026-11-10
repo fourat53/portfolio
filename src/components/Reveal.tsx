@@ -39,7 +39,7 @@ export function Reveal({
 	children,
 	variant = "up",
 	delay = 0,
-	className = "",
+	className,
 	amount = 0.2,
 }: RevealProps) {
 	const delaySeconds = delay / 1000;
@@ -77,11 +77,11 @@ export function Reveal({
 
 	return (
 		<motion.div
-			className={className}
 			initial={hiddenPoses[variant]}
 			whileInView={visiblePoses[variant]}
 			viewport={{ once: true, amount }}
 			transition={transition}
+			className={className}
 		>
 			{children}
 		</motion.div>

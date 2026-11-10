@@ -60,12 +60,12 @@ export function Hero() {
 			>
 				<motion.div
 					aria-hidden="true"
+					variants={glowVariants}
 					className="pointer-events-none absolute -inset-8 z-0"
 					style={{
 						background:
 							"radial-gradient(60% 55% at 50% 45%, var(--shadow-glow), transparent 70%)",
 					}}
-					variants={glowVariants}
 				/>
 
 				<motion.img
@@ -75,30 +75,27 @@ export function Hero() {
 					variants={imageVariants}
 				/>
 
-				<div className="py-6 relative z-10 flex w-full flex-1 flex-col items-center justify-center text-center">
-					<h1 className="mb-6 mt-4 font-display text-4xl leading-[1.1] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-						<span className="block overflow-hidden">
-							<motion.span className="block" variants={firstLineVariants}>
-								Software Engineer
-							</motion.span>
-						</span>
-						<span className="block overflow-hidden">
-							<motion.span
-								className="block italic text-text-secondary"
-								variants={secondLineVariants}
-							>
-								& Full-Stack Developer
-							</motion.span>
-						</span>
+				<div className="px-4 sm:px-8 md:px-0 md:pr-12 pb-8 pt-16 md:py-6 relative z-10 flex w-full flex-1 flex-col items-center justify-center text-center">
+					<h1 className="mb-6 mt-4 font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] tracking-tight">
+						<motion.span className="block" variants={firstLineVariants}>
+							Software Engineer
+						</motion.span>
+
+						<motion.span
+							className="block italic text-text-secondary"
+							variants={secondLineVariants}
+						>
+							& Full-Stack Developer
+						</motion.span>
 					</h1>
 
 					<motion.p
-						className="mb-4 md:mb-12 max-w-2xl text-sm font-light leading-relaxed text-text-muted md:text-base"
+						className="mb-4 md:mb-12 max-w-3xl text-sm font-light leading-relaxed text-text-muted md:text-base"
 						variants={copyVariants}
 					>
 						Software engineer with hands-on experience in full-stack
-						development, DevOps, and AI. I build premium web applications,
-						reliable delivery pipelines, and intelligent features like RAG
+						development, DevOps and AI. I build premium web applications,
+						reliable delivery pipelines and intelligent features like RAG
 						systems and AI agents, tailored to your business needs.
 					</motion.p>
 

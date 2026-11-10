@@ -99,7 +99,7 @@ export function Footer() {
 			whileInView="visible"
 			viewport={{ once: true, amount: 0.2 }}
 			variants={footerVariants}
-			className="relative overflow-hidden border-t border-primary bg-bg-primary px-6 py-12 sm:px-10 sm:py-16 md:py-20"
+			className="relative overflow-hidden border-t border-primary bg-bg-secondary"
 		>
 			<motion.div
 				aria-hidden="true"
@@ -107,15 +107,15 @@ export function Footer() {
 				className="pointer-events-none absolute inset-x-0 top-0 h-px origin-left bg-linear-to-r from-transparent via-accent-primary to-transparent"
 			/>
 
-			<div className="mx-auto max-w-7xl">
-				<div className="flex flex-col justify-between gap-12 md:flex-row">
+			<div className="px-16">
+				<div className="py-16 px-5 flex flex-col justify-between gap-8 md:flex-row">
 					<motion.div variants={slideLeftVariants}>
 						<p className="flex items-center gap-3 text-sm font-medium tracking-[0.15em] uppercase text-text-primary">
 							Fourat Taktak
 						</p>
 						<p className="mt-3 max-w-sm text-xs leading-relaxed tracking-wide text-text-subtle">
 							Software engineer specializing in full-stack web development,
-							DevOps, and AI integrations.
+							DevOps and AI integrations.
 						</p>
 						<p className="mt-4 flex items-center gap-2 text-[10px] uppercase tracking-[0.16em] text-text-subtle">
 							<IconMapPin size={13} stroke={1.5} />
@@ -160,10 +160,9 @@ export function Footer() {
 						</div>
 					</motion.div>
 				</div>
-
 				<motion.div
 					variants={fadeUpVariants}
-					className="mt-12 flex flex-col items-start justify-between gap-4 border-t pt-6 text-[10px] uppercase tracking-[0.18em] text-text-subtle sm:mt-16 sm:flex-row sm:items-center"
+					className="p-5 flex flex-col items-start justify-between gap-4 border-t text-[10px] uppercase tracking-[0.18em] text-text-subtle sm:flex-row sm:items-center"
 				>
 					<span>© {year} Fourat Taktak</span>
 					<motion.button

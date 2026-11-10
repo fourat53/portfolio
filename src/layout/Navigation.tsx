@@ -9,8 +9,8 @@ const navLinks = [
 	{ href: "#services", label: "Services" },
 	{ href: "#projects", label: "Projects" },
 	{ href: "#experience", label: "Experience" },
+	{ href: "#background", label: "Background" },
 	{ href: "#about", label: "About" },
-	{ href: "#contact", label: "Contact" },
 ];
 
 export default function Navigation() {
@@ -21,7 +21,7 @@ export default function Navigation() {
 			<div className="flex h-20 items-center justify-between">
 				<Logo size={36} />
 				<nav
-					className="hidden md:flex gap-2 text-[11px] uppercase"
+					className="absolute left-1/2 -translate-x-1/2 hidden md:flex gap-2 text-[11px] uppercase"
 					aria-label="Main navigation"
 				>
 					{navLinks.map((link) => (
@@ -37,7 +37,7 @@ export default function Navigation() {
 				<div className="flex items-center gap-3 sm:gap-4">
 					<a
 						href="mailto:fourat610654@gmail.com"
-						className="bg-bg-primary text-text-secondary hover:text-accent-secondary px-4 sm:px-6 py-2.5 border hover:border-primary font-medium transition-colors uppercase tracking-[0.15em] text-xs flex items-center gap-3"
+						className="h-9 bg-bg-primary text-text-secondary hover:text-accent-secondary px-4 sm:px-6 py-2.5 border hover:border-primary font-medium transition-colors uppercase tracking-[0.15em] text-xs flex items-center gap-3"
 					>
 						LET'S TALK
 					</a>
@@ -62,7 +62,7 @@ export default function Navigation() {
 
 			{menuOpen && (
 				<nav
-					className="md:hidden flex flex-col gap-1 pb-6 text-[11px] uppercase"
+					className="md:hidden flex flex-col gap-4.5 pb-6 text-[11px] uppercase"
 					aria-label="Mobile navigation"
 				>
 					{navLinks.map((link) => (
@@ -70,7 +70,7 @@ export default function Navigation() {
 							key={link.href}
 							href={link.href}
 							onClick={() => setMenuOpen(false)}
-							className="px-2.5 py-2.5 nav-link hover:text-text-primary transition-colors"
+							className="px-2.5 py-1.5 nav-link hover:text-text-primary transition-colors"
 						>
 							{link.label}
 						</a>

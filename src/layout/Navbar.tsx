@@ -15,7 +15,7 @@ export function Navbar() {
 
 	return (
 		<header
-			className={`fixed text-text-primary top-0 w-full z-50 transition-all bg-transparent backdrop-blur-md ${
+			className={`fixed text-text-primary top-0 w-full z-50 transition-all bg-bg-primary/60 backdrop-blur-md ${
 				scrolled ? "border-b border-primary/40" : ""
 			}`}
 		>

@@ -9,15 +9,15 @@ export function ThemeToggle() {
 		<button
 			type="button"
 			onClick={toggleTheme}
-			className="relative p-2 bg-bg-tertiary border hover:border-primary hover:text-primary transition-colors text-stone-400"
+			className="size-9 p-2 bg-bg-primary text-text-secondary hover:text-accent-secondary border hover:border-primary transition-colors"
 		>
 			<span className="sr-only">
 				{theme === "dark" ? "Light mode" : "Dark mode"}
 			</span>
 			{theme === "dark" ? (
-				<IconSun size={18} stroke={1.5} />
+				<IconSun stroke={1.5} className="size-4.5" />
 			) : (
-				<IconMoon size={18} stroke={1.5} />
+				<IconMoon stroke={1.5} className="size-4.5" />
 			)}
 		</button>
 	);

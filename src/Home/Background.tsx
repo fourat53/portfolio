@@ -1,3 +1,4 @@
+import SectionTitle from "#/layout/SectionTitle.tsx";
 import { Reveal } from "@/components/Reveal";
 
 const education = [
@@ -24,32 +25,19 @@ export function Background() {
 	return (
 		<section
 			id="background"
-			className="border-t border-primary bg-bg-primary px-6 py-16 sm:py-20 lg:py-24"
+			className="border-t border-primary bg-bg-secondary px-6 py-16 sm:py-20 lg:py-24"
 		>
-			<div className="mx-auto max-w-5xl">
-				<div className="mb-10 flex flex-col gap-6 md:mb-14 md:flex-row md:items-end md:justify-between">
-					<Reveal variant="left">
-						<div>
-							<div className="mb-5 text-[11px] tracking-[0.2em] uppercase text-text-subtle">
-								Background
-							</div>
-							<h2 className="font-display text-3xl leading-tight sm:text-4xl lg:text-5xl">
-								Education{" "}
-								<span className="italic text-text-secondary">
-									&amp; languages
-								</span>
-							</h2>
-						</div>
-					</Reveal>
-					<Reveal variant="right" delay={140}>
-						<p className="max-w-sm text-sm font-light leading-relaxed text-text-muted md:text-right">
-							The academic foundation and communication skills behind my
-							engineering work.
-						</p>
-					</Reveal>
-				</div>
+			<SectionTitle title="Background" />
 
-				<div className="grid gap-10 border-t border-primary pt-10 md:grid-cols-[1.6fr_1fr] md:gap-16 md:pt-14">
+			<div className="mx-auto max-w-5xl">
+				<Reveal variant="right" delay={140}>
+					<p className="text-sm font-light leading-relaxed text-text-muted">
+						The academic foundation and communication skills behind my
+						engineering work.
+					</p>
+				</Reveal>
+
+				<div className="pt-6 sm:pt-8 grid gap-10 md:grid-cols-[1.6fr_1fr] md:gap-16">
 					<div>
 						<Reveal variant="up" delay={80}>
 							<h3 className="mb-6 text-[11px] tracking-[0.2em] uppercase text-text-subtle">
@@ -61,7 +49,7 @@ export function Background() {
 								<li key={item.degree} className="relative">
 									<span
 										aria-hidden="true"
-										className="absolute top-1.5 -left-[29px] h-2 w-2 rounded-full border border-primary bg-bg-primary"
+										className="absolute top-1.5 -left-7.25 h-2 w-2 rounded-full border border-primary bg-bg-primary"
 									/>
 									<Reveal variant="left" delay={index * 110} amount={0.2}>
 										<div>

@@ -1,47 +1,29 @@
+import { cn } from "cn";
 import { forwardRef, type HTMLAttributes } from "react";
 
 export interface CardProps extends HTMLAttributes<HTMLDivElement> {
-	variant?: "default" | "elevated" | "outlined" | "project";
+	variant: "service" | "project";
 	hover?: boolean;
-	padding?: "none" | "sm" | "md" | "lg";
 	children: React.ReactNode;
 	className?: string;
 }
 
-const paddingClasses = {
-	none: "",
-	sm: "p-3 md:p-4",
-	md: "p-4 md:p-6",
-	lg: "p-5 md:p-8",
-};
-
 const variantClasses = {
-	default: "bg-bg-secondary border border-primary",
-	elevated: "bg-bg-background border border-white/5 shadow-md",
-	outlined: "bg-transparent border border-white/10",
-	project:
-		"bg-bg-primary overflow-hidden relative border border-primary hover:shadow-md hover:translate-y-[-2px] hover:translate-x-[-1px]",
+	service:
+		"py-6 px-8 bg-bg-secondary border border-primary group flex h-full flex-col",
+	project: "group bg-bg-primary overflow-hidden relative border border-primary",
 };
-
-const hoverClasses =
-	"hover:shadow-md hover:translate-y-[-2px] hover:translate-x-[-1px] hover:bg-bg-card";
 
 export const Card = forwardRef<HTMLDivElement, CardProps>(
-	(
-		{
-			variant = "default",
-			padding = "md",
-			hover,
-			children,
-			className = "",
-			...props
-		},
-		ref,
-	) => {
+	({ variant, children, className, hover = true, ...props }, ref) => {
+		const hoverClasses =
+			hover &&
+			"hover:shadow-lg hover:-translate-y-0.5 hover:-translate-x-px transition-all duration-300";
+
 		return (
 			<div
 				ref={ref}
-				className={`${variantClasses[variant]} ${hover ? hoverClasses : ""} ${paddingClasses[padding]} transition-all duration-300 ${className}`}
+				className={cn(hoverClasses, variantClasses[variant], className)}
 				{...props}
 			>
 				{children}
@@ -59,7 +41,7 @@ export interface CardHeaderProps extends HTMLAttributes<HTMLDivElement> {
 export const CardHeader = forwardRef<HTMLDivElement, CardHeaderProps>(
 	({ className = "", children, ...props }, ref) => {
 		return (
-			<div ref={ref} className={`mb-6 ${className}`} {...props}>
+			<div ref={ref} className={cn("mb-6", className)} {...props}>
 				{children}
 			</div>
 		);
@@ -100,7 +82,10 @@ export const CardDescription = forwardRef<
 	return (
 		<p
 			ref={ref}
-			className={`text-sm text-stone-400 font-light leading-relaxed mt-4 mb-8 ${className}`}
+			className={cn(
+				"text-sm text-stone-400 font-light leading-relaxed mt-4 mb-8",
+				className,
+			)}
 			{...props}
 		>
 			{children}

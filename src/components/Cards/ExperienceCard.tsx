@@ -52,7 +52,7 @@ function ExperienceCard({
 							<div className="text-sm text-stone-500">{role}</div>
 							<div className="text-xs text-text-subtle mt-1">{location}</div>
 						</div>
-						<p className="text-sm text-stone-400 mb-6 font-light leading-relaxed">
+						<p className="text-sm text-stone-800 dark:text-stone-400 mb-6 font-light leading-relaxed">
 							{description}
 						</p>
 						<ul className="text-sm text-stone-500 list-disc list-inside space-y-2 font-light">
@@ -75,7 +75,7 @@ function ExperienceCard({
 							<div className="text-sm text-stone-500">{role}</div>
 							<div className="text-xs text-text-subtle mt-1">{location}</div>
 						</div>
-						<p className="text-sm text-stone-400 mb-6 font-light leading-relaxed">
+						<p className="text-sm text-stone-800 dark:text-stone-400 mb-6 font-light leading-relaxed">
 							{description}
 						</p>
 						<ul className="text-sm text-stone-500 list-disc list-inside space-y-2 font-light md:list-none">
